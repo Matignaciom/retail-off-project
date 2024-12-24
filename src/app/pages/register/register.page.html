@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="register-page">
+  <div class="register-container">
+    <ion-img src="assets/icon/favicon.png" alt="Retail Off Logo" class="logo"></ion-img>
+
+    <!-- Botón de vuelta con flecha -->
+    <ion-button fill="clear" (click)="navigateToHome()" class="back-to-home-btn">
+      <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+
+    <ion-item lines="none">
+      <ion-label position="floating">Nombre Completo</ion-label>
+      <ion-input type="text" [(ngModel)]="fullName" placeholder="Ingrese su nombre completo" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="email" placeholder="Ingrese su correo" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password" placeholder="Cree una contraseña" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmPassword" placeholder="Confirme su contraseña" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" class="register-button" (click)="onSubmit()">
+      Registrarse
+    </ion-button>
+
+    <ion-text>
+      <p>
+        ¿Ya tienes una cuenta?
+        <span (click)="navigateToLogin()" class="login-link">Inicia sesión aquí</span>
+      </p>
+    </ion-text>
+  </div>
+</ion-content>

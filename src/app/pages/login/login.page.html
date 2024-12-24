@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="login-page">
+  <div class="login-container">
+    <!-- Logo -->
+    <ion-img src="assets/icon/favicon.png" alt="Retail Off Logo" class="logo"></ion-img>
+
+    <!-- Botón de vuelta con flecha (justo arriba del campo de correo) -->
+    <ion-button fill="clear" (click)="navigateToHome()" class="back-to-home-btn">
+      <ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+
+    <!-- Campos de inicio de sesión -->
+    <ion-item lines="none">
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" placeholder="Ingrese su correo"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese su contraseña"></ion-input>
+    </ion-item>
+
+    <!-- Botón de inicio de sesión -->
+    <ion-button expand="block" class="login-button" routerLink="/home">
+      Iniciar Sesión
+    </ion-button>
+
+    <!-- Enlace para registro -->
+    <ion-text>
+      <p>
+        ¿No tienes una cuenta?
+        <span (click)="navigateToRegister()" class="register-link">Regístrate aquí</span>
+      </p>
+    </ion-text>
+  </div>
+</ion-content>
